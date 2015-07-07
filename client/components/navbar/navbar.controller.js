@@ -5,6 +5,9 @@ angular.module('evolutionApp')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
+    },{
+      title: 'Reader',
+      link: '/reader'
     }];
 
     $scope.isCollapsed = true;
