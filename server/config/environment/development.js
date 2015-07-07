@@ -8,5 +8,5 @@ module.exports = {
     uri: 'mongodb://localhost/evolution-dev'
   },
 
-  seedDB: true
+  seedDB: false
 };
