@@ -1,0 +1,21 @@
+<div class="add-text-modal">
+  <div class="modal-header">
+    <h3 class="modal-title">Add new text</h3>
+  </div>
+
+  <div class="modal-body">
+    <div class="form-group">
+      <label>Caption</label>
+      <input type="text" class="form-control" ng-model="caption"/>
+    </div>
+    <div class="form-group">
+      <label>Text</label>
+      <textarea class="form-control main-text" ng-model="text"></textarea>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+  </div>
+</div>
