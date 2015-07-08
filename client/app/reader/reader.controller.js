@@ -3,12 +3,12 @@
 angular.module('evolutionApp')
   .controller('ReaderCtrl', function ($scope, $modal, $http, $log) {
     $scope.texts = [];
-    $http.get('/api/text')
+    $http.get('/api/texts')
       .success(function(textsList){
-        angular.extend($scope.text, textsList);
+        angular.extend($scope.texts, textsList);
       })
       .error(function(data, status){
-        $log.error('Can not get text list. Server response with status: ', status, 'And data: ', data);
+        $log.error('Can not get text list. Server response with status: ', status);
       });
 
     $scope.addText = function(){
@@ -18,9 +18,9 @@ angular.module('evolutionApp')
         controller: 'AddTextModalCtrl',
         size: 'lg'
       }).result.then(function(textObj){
-          $http.post('/api/text', textObj)
+          $http.post('/api/texts', textObj)
             .success(function(createdText){
-              $scope.texts.push(createdText);
+              $scope.texts.unshift(createdText);
               $log.info('Text has been successfully created')
             })
             .error(function(data, status){
