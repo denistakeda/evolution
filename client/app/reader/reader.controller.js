@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('evolutionApp')
-  .controller('ReaderCtrl', function ($scope, $modal, $http, $log) {
+  .controller('ReaderCtrl', function ($scope, $modal, $http, $log, $state) {
     $scope.texts = [];
     $http.get('/api/texts')
       .success(function(textsList){
@@ -27,5 +27,9 @@ angular.module('evolutionApp')
               $log.error('Can not create text. Server response with status: ', status, 'And data: ', data);
             })
         });
+    }
+
+    $scope.goToText = function(textId){
+      $state.go('text', {textId: textId});
     }
   });

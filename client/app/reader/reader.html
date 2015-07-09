@@ -9,12 +9,19 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-12 texts-list">
-      <div ng-repeat="text in texts" class="text-item">
+
+  <div class="texts-list">
+    <div ng-repeat="text in texts"
+         class="text-item row"
+         ng-click="goToText(text._id)">
         <img src="img/page.png" />
-        <strong>{{text.caption}}: </strong>{{text.text}}
-      </div>
+        <div class="text-caption">
+          {{text.caption}}
+        </div>
+        <div class="text-content">
+          {{text.text}}
+        </div>
     </div>
   </div>
+
 </div>

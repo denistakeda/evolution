@@ -9,6 +9,19 @@
 }
 
 .text-item{
-  margin-bottom: 1em;
+  &:hover{
+    background-color: @gray-lighter;
+  }
+  transition: background-color 0.2s linear;
+  padding: 1em;
   cursor: pointer;
+  img{
+    margin-right: 1em;
+    width: 70px;
+    float: left;
+  }
+  .text-caption{
+    font-size: @font-size-large;
+    color: @gray;
+  }
 }
