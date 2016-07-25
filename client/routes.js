@@ -39,5 +39,13 @@ export default (
         });
       }}
     />
+    <Route
+      path="/food"
+      getComponent={(nextState, cb) => {
+        require.ensure([], require => {
+          cb(null, require('./modules/Food/pages/FoodPage/FoodPage').default);
+        });
+      }}
+    />
   </Route>
 );
