@@ -1,4 +1,4 @@
-## Evolution is an web service for comfortable learning language throw reading
+## Evolution is an web service for comfortable learning language through reading
 
 Build on top of MERN project with Immutable data structures
 
